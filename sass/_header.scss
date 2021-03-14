@@ -1,0 +1,87 @@
+.header {
+    background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url('/img/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+   grid-column: full-start/col-end 6;
+    padding: 4rem 8rem;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    @media only screen and (max-width:800px) {
+        grid-column: full-start/full-end ;
+
+    }
+    
+    
+    & > img{
+        height:3rem;
+        display: flex;
+        justify-self: center;
+    }
+    h4 {
+        font-size: 1.4rem;
+        color: $color-primary;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 400;
+    }
+    h1 {
+        font-size: 4.5rem;
+        color: #f9f7f6;
+        margin-bottom: 2rem;
+        font-weight: 400;
+    }
+    button {
+        text-transform: uppercase;
+        padding: 1.8rem 3rem;
+        background-color: $color-primary;
+        color: #fff;
+    }
+    &__seen--text {
+        color: #aaa;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        display: grid;
+        grid-column-gap: 2rem;
+        align-items: center;
+        grid-template-columns: 1fr max-content 1fr;
+      
+        &::after{
+            height: 1px;
+           
+            
+            background-color: currentColor;
+            content: '';
+        }
+        &::before{
+            height: 1px;
+           
+            background-color: currentColor;
+            content: '';
+        }
+    }
+    &__seen--logos {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 3rem;
+      justify-items: center;
+        img{
+            height: 2.5rem;
+            filter: brightness(70%);
+            @media only screen and (max-width:500px) {
+             height: 2rem;      
+            }
+            @media only screen and (max-width:450px) {
+                height: 1rem;      
+               }
+            
+        }
+        
+        }
+    span:last-child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

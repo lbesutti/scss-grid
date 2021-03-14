@@ -1,0 +1,99 @@
+.story{
+    &__pictures{
+        background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url('/img/back.jpg');
+        background-size: cover;
+        background-position: top;
+       grid-column: full-start/col-end 4;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+        @media only screen and (max-width:800px) {
+        
+            grid-column: full-start/full-end;
+            grid-row: 6/7;
+            grid-template-columns: repeat(8, 1fr);
+      
+            grid-template-rows: repeat(8, 1fr);
+            padding: 4.8rem;
+
+        }
+
+
+        img:first-child{
+            width:100%;
+            grid-row: 2/6;
+            grid-column: 2/6;
+            @media only screen and (max-width:800px) {
+        width: 80%;
+                grid-row: 1/-1;
+                grid-column: 1/7;
+               
+    
+            }
+            
+        }
+        img:last-child{
+            width:100%;
+            grid-row: 3/7;
+            grid-column:5/8;
+           
+            transform-origin: left;
+            @media only screen and (max-width:800px) {
+        
+                transform:translatey(-20%);
+           
+                transform: scale(1.2);
+    
+            }
+            
+
+transform: scale(1.2);        
+}
+    }
+    &__content{
+        background-color: $color-grey-light-1;
+    grid-column: col-start 5/ full-end;
+        padding: 6rem 8vw;
+        @media only screen and (max-width:800px) {
+        
+            grid-column: full-start/full-end;
+            grid-row: 5/6;
+            
+        }
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+        h4{
+            color:$color-primary;
+            font-size:1.6rem;
+            margin-bottom: 2rem;
+        }
+        h2{
+            font-size:4rem;
+            margin-bottom: 3rem;
+            color: #54483a;
+        }
+        p{
+            font-size:1.5rem;
+            margin-bottom: 4rem;
+            color: #6d5d4b;
+        }
+        button{
+            background-color: $color-primary;
+            color: white;
+            padding: 1.8rem 3rem;
+            border: none;
+            border: none;
+            transition: .2s;
+            &:hover{
+                background-color: $color-primary-dark;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
